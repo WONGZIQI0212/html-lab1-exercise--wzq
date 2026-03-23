@@ -21,28 +21,113 @@
             <legend style="font-size:18px;">Personal Information</legend>
 
             <label for="name">Full Name:</label><br>
+            <input 
+                type="text"
+                id="name" 
+                name="name" 
+                style="border:2px solid navy; padding:6px; font-size:14px;" 
+                placeholder="Enter your name" 
+                required 
+                maxlength="50"><br><br>
+
             <label for="email">Email:</label><br>
+            <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                style="border:2px solid burlywood; background-color:lightgoldenrodyellow; padding:5px;" 
+                placeholder="Enter your email" 
+                required 
+                maxlength="100"><br><br>
+
             <label for="phone">Phone:</label><br>
+            <input 
+                type="tel"
+                id="phone" 
+                name="phone"
+                style="border:1px solid gray;padding:5px; "
+                placeholder="012-3456789" 
+                required><br><br>
+
             <label for="age">Age:</label><br>
+            <input 
+                type="number" 
+                id="age" 
+                name="age"
+                min="12" 
+                max="100" 
+                style="border:2px solid blue; padding:5px;"><br><br>
+
             <label for="date">Date:</label><br>
+            <input 
+                type="date" 
+                id="date" 
+                name="date"><br><br>
             
         </fieldset>
-
 <br>
-
-        <fieldset style="border:2px solid green; padding:10px;">
+        <fieldset style="border:2px solid black; padding:10px;">
             <legend>Message Details</legend>
 
             <label for="subject">Subject:</label><br>
-            <label>Purpose Of Contact:</label><br>
+                <select 
+                    id="subject" 
+                    name="subject">
+                        <optgroup label="General">
+                            <option value="inquiry">Inquiry</option>
+                            <option value="feedback">Feedback</option>
+                        </optgroup>
+                        <optgroup label="Business">
+                            <option value="offer">Internship Offer</option>
+                            <option value="job">Job Opportunity</option>
+                            <option value="project">Project Collaboration</option>
+                        </optgroup>
+                </select><br><br>
+
+            <label>Topics of Interest:</label><br>
+
+                <input type="checkbox" id="topic-frontend" name="topic" value="frontend">
+                <label for="topic-frontend">Frontend Development</label><br>
+
+                <input type="checkbox" id="topic-ux" name="topic" value="ux">
+                <label for="topic-ux">UX Research</label><br>
+
+                <input type="checkbox" id="topic-cpp" name="topic" value="python">
+                <label for="topic-cpp">C++ Programming</label><br>
+
+                <input type="checkbox" id="topic-ai" name="topic" value="ai">
+                <label for="topic-ai">Artificial Intelligence</label><br><br>
+
             <label>Preferred Contact Method:</label><br>
+
+                <input type="radio" id="contact-email" name="contact" value="email">
+                <label for="contact-email">Email</label><br>
+
+                <input type="radio" id="contact-phone" name="contact" value="phone">
+                <label for="contact-phone">Phone</label><br>
+
+                <input type="radio" id="contact-whatsapp" name="contact" value="whatsapp">
+                <label for="contact-whatsapp">WhatsApp</label><br>
+
+                <input type="radio" id="contact-telegram" name="contact" value="telegram">
+                <label for="contact-telegram">Telegram</label><br><br>
+
             <label for="range">Urgent Level:</label><br>
+                <input type="range" id="range" name="range" min="1" max="5"><br><br>
+
             <label for="message">Message:</label><br>
+                <textarea 
+                    id="message" 
+                    name="message"
+                    style="width:300px; height:100px; padding:5px; color:rosybrown;"
+                    maxlength="200" 
+                    placeholder="Write your message here...">
+                </textarea><br><br>
           
         </fieldset>
 <br>
-        <button type="submit" style="background-color:blue; color:white; padding:10px;">
-            Submit
+        <button 
+            type="submit" style="background-color:blue; color:white; padding:10px;">Submit
         </button>
 
     </form>
