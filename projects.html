@@ -14,14 +14,24 @@
 <hr>
 <main>
 <section id="projects">
-    
+
+<!--
+-Use <figure> and <figcaption> to wrap each image with a descriptive caption
+-Every <img> must have a meaningful alt attribute — describe what is shown, not just the filename
+-Set width and height attributes on all images
+-Use the title attribute on one image to provide tooltip text on hover
+-Use the align attribute (deprecated — note this in an HTML comment) to float one image beside a
+paragraph of text
+-->
+
 <!-- Profile Image -->
+ <!--align attribute: (deprecated)-->
     <figure>
         <img 
         src="images/profile2.jpg" 
         alt="A photo of me smiling at the camera" width="130" 
         height="170" 
-        align="left" 
+        align="left"  
         title="This is my profile photo">
         <figcaption><b>My profile photo</b></figcaption>   
     </figure>
@@ -65,6 +75,7 @@
         </ul>
         <li><strong>Claims Approval System</strong></li>
 
+<!--Add one image inside an <a> tag so that clicking the image opens a URL-->
         <!-- Clickable Project Image -->
         <figure>
             <a href = "https://www.figma.com/proto/6Dg1uGPeyGkMW6l8areGcw/SRE-UC002-Claim-Approval-Prototype?node-id=32-2098&p=f&t=CEE7dzHbKpMNB0KH-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=32%3A2098&show-proto-sidebar=1">
