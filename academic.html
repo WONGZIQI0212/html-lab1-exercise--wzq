@@ -18,11 +18,19 @@
 <section id="academic">
     <h2>Academic Record</h2>
 
+<!-- Use <table> with <thead>, <tbody> and <tfoot> sections — never omit these -->
+<!-- Use the border, cellpadding and cellspacing attributes on the table (native HTML presentation — no CSS) -->
     <table border="1" cellpadding="8" cellspacing="0">
+
+<!--Add a <caption> element describing the table content (positioned above the table)-->
         <caption>Year 2 Academic Results</caption>
 
         <thead>
             <tr>
+
+<!--Use <th scope="col"> for column headers and <th scope="row"> for row headers-->
+<!--Demonstrate colspan and rowspan — e.g. a merged "Semester 1 & 2" header spanning multiple
+columns-->
                 <th scope="col" colspan="2">Semester 1 &amp; 2</th>
                 <!-- scope="col" = HEADER applies to all cells below--> 
                 <th scope="col">Credits</th>          
@@ -72,6 +80,7 @@
             
         </tbody>
 
+<!-- The <tfoot> must contain a summary row showing total credits or average grade using <strong> -->
         <tfoot>
             <tr>
                 <td colspan="2">Total Credits</td>
