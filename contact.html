@@ -8,17 +8,27 @@
 
 <body>
 
+<!--Apply the inline style attribute to at least 5 different elements to demonstrate: color, background-color, font-size, border, and padding-->
+
 <header>
-    <h1 style="text-align: center">Contact Me</h1>
+    <h1 style="color:maroon;background-color: linen;text-align: center">Contact Me</h1>
 </header>
 
 <main>
 
 <section id="contact">
+
+<!--
+-Use <form action="#" method="post"> with proper <fieldset> and <legend> grouping
+-Include these input types: text, email, tel, number, date, range, and textarea
+-->
     <form action="#" method="post">
 
-        <fieldset style="border:2px solid black; padding:10px;">
-            <legend style="font-size:18px;">Personal Information</legend>
+        <fieldset style="border:2px solid purple; padding:10px;">
+            <legend style="font-size:18px; color: purple;">Personal Information</legend>
+
+<!--Every input must have a linked <label for="..."> — no placeholder-only labelling-->
+<!--Use required, min, max, placeholder, and maxlength attributes appropriately-->
 
             <label for="name">Full Name:</label><br>
             <input 
@@ -35,7 +45,7 @@
                 type="email" 
                 id="email" 
                 name="email" 
-                style="border:2px solid burlywood; background-color:lightgoldenrodyellow; padding:5px;" 
+                style="border:3px solid burlywood; background-color:darkturquoise; padding:5px;" 
                 placeholder="Enter your email" 
                 required 
                 maxlength="100"><br><br>
@@ -56,7 +66,7 @@
                 name="age"
                 min="12" 
                 max="100" 
-                style="border:2px solid blue; padding:5px;"><br><br>
+                style="border:2px solid lightblue;background-color: lavenderblush; padding:5px;"><br><br>
 
             <label for="date">Date:</label><br>
             <input 
@@ -66,10 +76,12 @@
             
         </fieldset>
 <br>
-        <fieldset style="border:2px solid black; padding:10px;">
-            <legend>Message Details</legend>
+        <fieldset style="border:2px solid blueviolet; padding:10px;">
+            <legend style="font-size:18px; color: tomato;">Message Details</legend>
 
             <label for="subject">Subject:</label><br>
+
+<!--Use <select> with <optgroup> and <option> elements for a 'Subject' dropdown-->
                 <select 
                     id="subject" 
                     name="subject">
@@ -84,6 +96,7 @@
                         </optgroup>
                 </select><br><br>
 
+<!--Add at least 3 checkboxes and 3 radio buttons with correct matching name attribute grouping-->
             <label>Topics of Interest:</label><br>
 
                 <input type="checkbox" id="topic-frontend" name="topic" value="frontend">
@@ -119,14 +132,14 @@
                 <textarea 
                 id="message" 
                 name="message"
-                style="width:300px; height:100px; padding:5px; color:rosybrown;"
-                maxlength="200" 
+                style="width:300px; height:100px; padding:5px; color:crimson;background-color: cornsilk;"
+                maxlength="200"
                 placeholder="Write your message here..."></textarea><br><br>
           
         </fieldset>
 <br>
         <button 
-            type="submit" style="background-color:green; color:white; padding:10px;">Submit
+            type="submit" style="background-color:mediumseagreen; color:white; padding:10px;">Submit
         </button>
 
     </form>
@@ -144,7 +157,7 @@
 </a>
 
 <footer>
-    <p><small>© 2026 Wong Zi Qi. All rights reserved.</small></p>
+    <p style="background-color: lightgray"><small>© 2026 Wong Zi Qi. All rights reserved.</small></p>
 </footer>
 
 </body>
