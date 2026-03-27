@@ -114,3 +114,41 @@ caption {
   color: var(--color-muted);
 }
 
+/* === Landmark Sections === */
+
+header {
+  background-color: var(--color-primary);
+  color: var(--color-accent);
+  /* PADDING: space between header content and its edges */
+  padding: var(--space-lg) var(--space-md);
+}
+
+nav {
+  background-color: var(--color-secondary);
+  /* PADDING: inner breathing room for nav bar */
+  padding: var(--space-sm) var(--space-md);
+}
+
+main {
+  background-color: var(--color-surface);
+  /* PADDING: gives content room from page edges */
+  padding: var(--space-lg) var(--space-md);
+  /* MARGIN: auto centres main on wide screens */
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+footer {
+  background-color: var(--color-primary);
+  color: var(--color-accent);
+  padding: var(--space-md);
+  /* MARGIN: separates footer from content above */
+  margin-top: var(--space-lg);
+}
+
+/* === Link States === */
+
+a:link    { color: var(--color-accent-dark); text-decoration: none; }
+a:visited { color: var(--color-muted); }
+a:hover   { color: var(--color-accent); text-decoration: underline; }
+a:active  { color: var(--color-accent-dark); opacity: 0.7; }
