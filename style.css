@@ -17,7 +17,7 @@
   --color-surface: #f5f4f0;
 
   /* Font families */
-  --font-body: 'Lora', Georgia, serif; /* Arial, sans-serif; */.
+  --font-body: 'Lora', Georgia, serif; /* Arial, sans-serif; */
   --font-heading: 'Playfair Display', serif; /* Georgia; */
 
   /* Spacing */
@@ -26,7 +26,7 @@
   --space-lg: 3rem;
 
   /* box shadow */
-  --shadow-card: 0 4px 16px rgba(0,0,0,0.12)
+  --shadow-card: 0 4px 16px rgba(0,0,0,0.12);
 }
 
 /* CSS Reset */
@@ -124,6 +124,8 @@ header {
   color: var(--color-accent);
   /* PADDING: space between header content and its edges */
   padding: var(--space-lg) var(--space-md);
+  /* MARGIN: not used here — header spans full width with no external separation needed */
+  margin: 0;
 }
 
 nav {
@@ -131,12 +133,14 @@ nav {
   color: var(--color-accent);
   /* PADDING: inner breathing room for nav bar */
   padding: var(--space-sm) var(--space-md);
+  /* MARGIN: adds space below nav to separate it from main content */
+  margin-bottom: var(--space-md);
 }
 
 main {
   background-color: var(--color-surface);
   color: var(--color-text); 
-  /* PADDING: gives content room from page edges */
+  /* PADDING: ensures content doesn’t touch the container edges */
   padding: var(--space-lg) var(--space-md);
   /* MARGIN: auto centres main on wide screens */
   margin: 0 auto;
@@ -145,7 +149,8 @@ main {
 
 footer {
   background-color: var(--color-surface);
-  color: var(--color-accent);
+  color: var(--color-text);
+  /* PADDING: adds inner spacing for footer content */
   padding: var(--space-md);
   /* MARGIN: separates footer from content above */
   margin-top: var(--space-lg);
@@ -157,8 +162,13 @@ a:link    { color: var(--color-text); text-decoration: none; }
 a:visited { color: var(--color-muted); }
 a:hover   { color: var(--color-accent); text-decoration: underline; }
 a:active  { color: var(--color-accent2); opacity: 0.7; }
+a:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--color-accent);
+  border-radius: 4px;
+}
 
-/* === Border Radius === */
+/* === border radius + box shadow === */
 
 button, .btn {
   border-radius: 6px;
