@@ -4,7 +4,7 @@
    tablet: @media (min-width: 600px)
    desktop: @media (min-width: 1024px)
    ============================================ */
-   
+
 /* TASK 1 */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lora:wght@400;600&display=swap');
 
@@ -354,3 +354,9 @@ aside p {
   margin: var(--space-sm) 0;
 }
 
+/* TASK 5 */
+/* === Responsive images === */
+img {
+  max-width: 100%;
+  height: auto;
+}
