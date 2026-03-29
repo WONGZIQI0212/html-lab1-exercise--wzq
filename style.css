@@ -531,3 +531,24 @@ tfoot tr {
   background-color: var(--color-accent-dark);
   color: var(--color-accent);
 }
+
+/* TASK 6 — :first-child & :last-child border removal on list */
+
+.removal-list {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-md) 0;
+}
+
+.removal-list li {
+  border-top: 1px solid var(--color-muted);
+  padding: var(--space-sm) 0;
+}
+
+.removal-list li:first-child {
+  border-top: none; /* removes top border on the first item */
+}
+
+.removal-list li:last-child {
+  border-bottom: none; /* removes bottom border on the last item */
+}
