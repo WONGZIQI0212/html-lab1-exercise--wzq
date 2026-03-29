@@ -254,8 +254,7 @@ nav a {
 }
 
 /* Header flexbox */
-/* TASK 5 */
-/* === Mobile base styles === */
+/* TASK 5: Mobile base styles (320px and up) */
 
 .header-inner {
   display: flex;
@@ -339,7 +338,7 @@ nav a {
 .page-layout {
   display: grid;
   /* Sidebar stacks below main on mobile */
-  grid-template-columns: 1fr  280px;
+  grid-template-columns: 1fr;
   gap: var(--space-md); /* gap: 1.5rem  */
   align-items: start;
   max-width: 1200px;
@@ -366,9 +365,34 @@ aside p {
   margin: var(--space-sm) 0;
 }
 
-/* TASK 5 */
-/* === Responsive images === */
+/* TASK 5 :Responsive images */
 img {
   max-width: 100%;
   height: auto;
+}
+
+/* TASK 5 : Tablet styles (600px+) */
+@media (min-width: 600px) {
+
+  /* Header becomes two-column Flex row */
+  .header-inner {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  /* Nav links go horizontal */
+  .nav-links {
+    flex-direction: row;
+    width: auto;
+  }
+
+  /* Card grid 2 columns on tablet */
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Featured card spans both columns */
+  .featured-card {
+    grid-column: span 2;
+  }
 }
