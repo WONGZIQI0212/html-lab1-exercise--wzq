@@ -265,3 +265,27 @@ nav a {
   height: 180px;
   object-fit: cover;
 }
+
+/* TASK 4 */
+/* === Card Grid === */
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* mobile default — single column */
+  gap: var(--space-md);
+  margin-top: var(--space-md);
+}
+
+.card {
+  background-color: #ffffff;
+  padding: var(--space-md);
+  border-radius: 10px;
+  box-shadow: var(--shadow-card);
+  display: grid;
+  align-content: start;
+  transition: transform 0.2s;
+}
+
+.card h3 {
+  margin-top: 0;
+  margin-bottom: var(--space-sm);
+}
