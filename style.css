@@ -289,3 +289,45 @@ nav a {
   margin-top: 0;
   margin-bottom: var(--space-sm);
 }
+
+/* === Featured card spans full row === */
+.featured-card {
+  grid-column: span 2;
+  background-color: var(--color-primary);
+  color: var(--color-accent);
+}
+
+.featured-card h3,
+.featured-card p {
+  color: var(--color-accent);
+}
+
+/* === Sidebar two-column layout === */
+.page-layout {
+  display: grid;
+  grid-template-columns: 1fr; /* mobile: single column */
+  gap: var(--space-md);
+  align-items: start;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+aside {
+  background-color: var(--color-secondary);
+  color: var(--color-accent);
+  padding: var(--space-md);
+  border-radius: 10px;
+  box-shadow: var(--shadow-card);
+}
+
+aside h3 {
+  color: var(--color-accent);
+  margin-top: 0;
+  margin-bottom: var(--space-sm);
+}
+
+aside p {
+  color: var(--color-accent);
+  font-size: 1.4rem;
+  margin: var(--space-sm) 0;
+}
