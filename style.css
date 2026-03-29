@@ -409,3 +409,27 @@ img {
     grid-template-columns: 1fr 280px;
   }
 }
+
+/* TASK 6 — Style all form inputs, textarea, select  */
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+input[type="range"],
+textarea,
+select {
+  width: 100%;
+  padding: var(--space-sm) var(--space-md);
+  border: 2px solid var(--color-muted);
+  border-radius: 6px;
+  font-family: var(--font-body);
+}
+
+input[type="checkbox"],
+input[type="radio"]{
+  display: inline;
+  font-weight: 400;
+  margin-top: 0;
+}
