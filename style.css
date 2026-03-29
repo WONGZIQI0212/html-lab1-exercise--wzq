@@ -470,9 +470,9 @@ button[type="submit"]:active {
   transform: scale(0.97);
 }
 
-/* TASK 6 — Subtask 6.4: ::before pseudo-elements on two elements */
+/* TASK 6 — ::before pseudo-elements on two elements */
 
-/* 1. Decorative opening quote mark on blockquote */
+/* Decorative opening quote mark on blockquote */
 blockquote::before {
   content: '"';
   font-family: var(--font-heading);
@@ -484,6 +484,7 @@ blockquote::before {
   display: inline-block;
 }
 
+/* Decorative closing quote mark on blockquote */
 blockquote::after {
   content: '"';
   font-family: var(--font-heading);
@@ -495,7 +496,7 @@ blockquote::after {
   display: inline-block;
 }
 
-/* 2. Coloured left bar on section headings */
+/* Coloured left bar on section headings */
 .section-heading::before {
   content: '';
   display: inline-block;
@@ -505,4 +506,28 @@ blockquote::after {
   margin-right: var(--space-sm);
   vertical-align: middle;
   border-radius: 3px;
+}
+
+/* TASK 6 — :nth-child alternating table row colours */
+thead {
+  background-color: var(--color-secondary);
+  color: var(--color-accent);
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--color-surface2);
+}
+
+tbody tr:nth-child(odd) {
+  background-color: var(--color-surface);
+}
+
+tbody td,
+tbody th {
+  text-align: left;
+}
+
+tfoot tr {
+  background-color: var(--color-accent-dark);
+  color: var(--color-accent);
 }
