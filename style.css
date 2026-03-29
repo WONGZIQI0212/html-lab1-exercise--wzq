@@ -140,6 +140,16 @@ nav {
   padding: var(--space-sm) var(--space-md);
   /* MARGIN: adds space below nav to separate it from main content */
   margin-bottom: var(--space-md);
+
+  /* === TASK 3: Navigation Flexbox === */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 main {
@@ -190,17 +200,6 @@ nav a {
 
 /* TASK 3 */
 /* === Navigation Flexbox === */
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: var(--space-sm) var(--space-md);
-  flex-wrap: wrap;
-  gap: var(--space-sm);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
 
 .nav-brand {
   font-family: var(--font-heading);
@@ -229,6 +228,7 @@ nav {
 .nav-links a:hover {
   background-color: var(--color-accent);
   color: var(--color-primary);
+  text-decoration: none;
 }
 
 .nav-links a.active {
@@ -248,6 +248,8 @@ nav {
 .header-text h1 {
   color: var(--color-accent);
   margin-bottom: var(--space-sm); 
+  font-size: 3.2rem;
+  flex:1;
 }
 
 .header-text p {
@@ -257,8 +259,9 @@ nav {
 }
 
 .header-image img {
-  border-radius: 50%;
+  border-radius: 20%;
   border: 3px solid var(--color-accent);
-  max-width: 100%;
-  height: auto;
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
 }
