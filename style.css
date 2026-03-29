@@ -433,3 +433,10 @@ input[type="radio"]{
   font-weight: 400;
   margin-top: 0;
 }
+
+fieldset {
+  border: 2px solid var(--color-accent-dark);
+  border-radius: 8px;
+  padding: var(--space-md) var(--space-lg);
+  margin-bottom: var(--space-md);
+}
