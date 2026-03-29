@@ -1,3 +1,4 @@
+/* TASK 1 */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lora:wght@400;600&display=swap');
 
 /* === CSS Architecture === */
@@ -47,6 +48,7 @@ html {
   font-size: 62.5%; /* 1rem = 10px */
 }
 
+/* TASK 2 */
 /* === Typography Scale === */
 
 h1 {
@@ -181,4 +183,34 @@ button, .btn {
 
 nav a {
   border-radius: 4px;
+}
+
+/* TASK 3 */
+/* === Navigation Flexbox === */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-sm) var(--space-md);
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-brand {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
 }
