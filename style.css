@@ -1,12 +1,12 @@
+/* TASK 1 */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lora:wght@400;600&display=swap');
+
 /* ============================================
    BREAKPOINTS
    mobile-first base: 320px and up (default)
    tablet: @media (min-width: 600px)
    desktop: @media (min-width: 1024px)
    ============================================ */
-
-/* TASK 1 */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lora:wght@400;600&display=swap');
 
 /* === CSS Architecture === */
 
@@ -294,11 +294,10 @@ nav a {
 /* === Card Grid === */
 .card-grid {
   display: grid;
-  grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); /* mobile default — single column */
-  gap: var(--space-md);
-  margin-top: var(--space-md);
   /* Card grid: single column on mobile */
   grid-template-columns: 1fr;
+  gap: var(--space-md);
+  margin-top: var(--space-md);
 }
 
 .card {
@@ -374,6 +373,11 @@ img {
 /* TASK 5 : Tablet styles (600px+) */
 @media (min-width: 600px) {
 
+  /* Card grid 2 columns on tablet */
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   /* Header becomes two-column Flex row */
   .header-inner {
     flex-direction: row;
@@ -384,11 +388,6 @@ img {
   .nav-links {
     flex-direction: row;
     width: auto;
-  }
-
-  /* Card grid 2 columns on tablet */
-  .card-grid {
-    grid-template-columns: repeat(2, 1fr);
   }
 
   /* Featured card spans both columns */
@@ -402,7 +401,7 @@ img {
 
   /* Full 3-column card grid */
   .card-grid {
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
   }
 
   /* Sidebar layout activates: wide main + narrow aside */
