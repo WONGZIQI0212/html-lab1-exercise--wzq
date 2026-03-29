@@ -396,3 +396,17 @@ img {
     grid-column: span 2;
   }
 }
+
+/* TASK 5: Desktop (1024px+) */
+@media (min-width: 1024px) {
+
+  /* Full 3-column card grid */
+  .card-grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+
+  /* Sidebar layout activates: wide main + narrow aside */
+  .page-layout {
+    grid-template-columns: 1fr 280px;
+  }
+}
