@@ -10,7 +10,7 @@
 
   /* Accent colours */
   --color-accent: #e8d5b7;
-  --color-accent-dark: #8B4513;
+  --color-accent-dark: #800000;
   --color-accent2: #f05454;
   --color-accent3: #00ffff;
 
@@ -19,6 +19,7 @@
   --color-muted: #666666;
   --color-surface: #f5f4f0;
   --color-surface2: #c0c0c0;
+  --color-surface3: #FFE4E1;
 
   /* Font families */
   --font-body: 'Lora', Georgia, serif; /* Arial, sans-serif; */
@@ -131,8 +132,8 @@ hr {
 /* === Landmark Sections === */
 
 header {
-  background-color: var(--color-surface);
-  color: var(--color-accent);
+  background-color: var(--color-accent);
+  color: var(--color-primary);
   /* PADDING: space between header content and its edges */
   padding: var(--space-lg) var(--space-md);
   /* MARGIN: not used here — header spans full width with no external separation needed */
@@ -256,20 +257,20 @@ nav a {
 }
 
 .header-text h1 {
-  color: var(--color-accent);
+  color: var(--color-primary);
   margin-bottom: var(--space-sm); 
   font-size: 3.2rem;
 }
 
 .header-text p {
-  color: var(--color-accent);
+  color: var(--color-secondary);
   font-size: 1.8rem;
   margin: 0;
 }
 
 .header-image img {
   border-radius: 20%;
-  border: 3px solid var(--color-accent);
+  border: 3px solid var(--color-primary);
   width: 180px;
   height: 180px;
   object-fit: cover;
