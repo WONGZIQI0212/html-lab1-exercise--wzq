@@ -440,3 +440,17 @@ fieldset {
   padding: var(--space-md) var(--space-lg);
   margin-bottom: var(--space-md);
 }
+
+/* TASK 6 — Visible focus state */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+input[type="checkbox"]:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--color-accent);
+  border-color: var(--color-accent-dark);
+}
