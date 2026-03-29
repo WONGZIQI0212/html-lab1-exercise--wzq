@@ -122,6 +122,12 @@ caption {
   color: var(--color-muted);
 }
 
+hr {
+  border: none;
+  border-top: 1px solid var(--color-accent);
+  margin: 0;
+}
+
 /* === Landmark Sections === */
 
 header {
@@ -245,11 +251,14 @@ nav a {
   gap: var(--space-lg);
 }
 
+.header-text{
+  flex:1;
+}
+
 .header-text h1 {
   color: var(--color-accent);
   margin-bottom: var(--space-sm); 
   font-size: 3.2rem;
-  flex:1;
 }
 
 .header-text p {
@@ -270,13 +279,13 @@ nav a {
 /* === Card Grid === */
 .card-grid {
   display: grid;
-  grid-template-columns: 1fr; /* mobile default — single column */
+  grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); /* mobile default — single column */
   gap: var(--space-md);
   margin-top: var(--space-md);
 }
 
 .card {
-  background-color: #ffffff;
+  background-color: var(--color-surface2);
   padding: var(--space-md);
   border-radius: 10px;
   box-shadow: var(--shadow-card);
@@ -288,6 +297,11 @@ nav a {
 .card h3 {
   margin-top: 0;
   margin-bottom: var(--space-sm);
+}
+
+/* Hover lift with transform */
+.card:hover {
+  transform: translateY(-4px);
 }
 
 /* === Featured card spans full row === */
@@ -305,8 +319,8 @@ nav a {
 /* === Sidebar two-column layout === */
 .page-layout {
   display: grid;
-  grid-template-columns: 1fr; /* mobile: single column */
-  gap: var(--space-md);
+  grid-template-columns: 1fr  280px; /* mobile: single column */
+  gap: var(--space-md); /* gap: 1.5rem  */
   align-items: start;
   max-width: 1200px;
   margin: 0 auto;
@@ -331,3 +345,4 @@ aside p {
   font-size: 1.4rem;
   margin: var(--space-sm) 0;
 }
+
