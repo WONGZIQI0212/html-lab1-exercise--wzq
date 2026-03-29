@@ -214,3 +214,20 @@ nav {
   flex-wrap: wrap;
   gap: var(--space-sm);
 }
+
+.nav-links a {
+  color: var(--color-accent);
+  padding: var(--space-sm) var(--space-md);
+  border-radius: 4px;
+  transition: color 0.2s, background-color 0.2s;
+}
+
+.nav-links a:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+}
+
+.nav-links a.active {
+  border-bottom: 3px solid var(--color-accent-dark);
+  color: var(--color-accent);
+}
