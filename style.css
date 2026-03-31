@@ -283,12 +283,14 @@ nav a {
 }
 
 .header-image img {
-  border-radius: 20%;
-  border: 3px solid var(--color-primary);
-  width: 180px;
-  height: 180px;
+  border-radius: 50%;
+  border: 2px solid var(--color-primary);
+  width: 130px;
+  height: 130px;
   object-fit: cover;
 }
+
+
 
 /* TASK 4 */
 /* === Card Grid === */
