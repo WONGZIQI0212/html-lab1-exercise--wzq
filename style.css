@@ -177,7 +177,7 @@ main {
 }
 
 footer {
-  background-color: var(--color-surface);
+  background-color: var(--color-surface2);
   color: var(--color-text);
   /* PADDING: adds inner spacing for footer content */
   padding: var(--space-md);
@@ -296,12 +296,13 @@ nav a {
   display: grid;
   /* Card grid: single column on mobile */
   grid-template-columns: 1fr;
+  /* grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); */
   gap: var(--space-md);
   margin-top: var(--space-md);
 }
 
 .card {
-  background-color: var(--color-surface2);
+  background-color: var(--color-accent-dark);
   padding: var(--space-md);
   border-radius: 10px;
   box-shadow: var(--shadow-card);
@@ -311,8 +312,14 @@ nav a {
 }
 
 .card h3 {
+  color: var(--color-accent);
   margin-top: 0;
   margin-bottom: var(--space-sm);
+}
+
+.card h3,
+.card p {
+  color: var(--color-accent);
 }
 
 /* Hover lift with transform */
@@ -344,8 +351,25 @@ nav a {
   margin: 0 auto;
 }
 
+
+
+
+/* !!!111111111111111111111111111111111               
+               check again!!!
+11111111111111111111111111111111111111!!! */
+
+
+
+
+/* ???? <main> inside .page-layout has conflicting styles
+main has max-width: 1200px and margin: 0 auto which fights the grid layout on about.html. Add this to override it:  */
+.page-layout > main {
+  max-width: 100%;
+  margin: 0;
+}
+
 aside {
-  background-color: var(--color-secondary);
+  background-color: var(--color-accent-dark);
   color: var(--color-accent);
   padding: var(--space-md);
   border-radius: 10px;
@@ -401,8 +425,11 @@ img {
 
   /* Full 3-column card grid */
   .card-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    /* grid-template-columns: repeat(3, 1fr); */
   }
+
+  .featured-card { grid-column: span 2 }
 
   /* Sidebar layout activates: wide main + narrow aside */
   .page-layout {
@@ -441,6 +468,20 @@ fieldset {
   margin-bottom: var(--space-md);
 }
 
+/* legend and label styling */
+legend {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+label {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
 /* TASK 6 — Visible focus state */
 input[type="text"]:focus,
 input[type="email"]:focus,
@@ -468,6 +509,8 @@ button[type="submit"] {
   font-family: var(--font-body);
   font-size: 1.6rem;
   transition: background-color 0.2s, transform 0.1s;
+  border: none; 
+  cursor: pointer;
 }
 
 button[type="submit"]:hover {
