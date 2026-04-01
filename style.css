@@ -431,6 +431,10 @@ img {
   .featured-card {
     grid-column: span 2;
   }
+
+  .page-layout {
+    grid-template-columns: 1fr 28rem;
+  }
 }
 
 /* TASK 5: Desktop (1024px+) */
